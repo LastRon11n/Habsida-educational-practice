@@ -4,7 +4,7 @@
   /* альтернативный вариант задания относительного размера grid
   ------------------------------------------------------------- */
   /* grid-template-columns: repeat(auto-fit, minmax (150px, 1fr)); 
-  -------------------------------------------------------------- */ 
+  -------------------------------------------------------------- */
 
   grid-template-rows: 100px 100px 250px 100px;
   gap: 10px;
@@ -44,13 +44,13 @@
   grid-column: 1/4;
 }
 
-.middle{
+.middle {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.picture{
+.picture {
   background-color: orange;
   width: 100px;
   height: 100px;
