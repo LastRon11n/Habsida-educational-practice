@@ -214,7 +214,7 @@ input {
   transition: all 0.3s ease;
 }
 
-/* подсечиваем рамку при наведении на катомный кружок */
+/* подсечиваем рамку при наведении на кастомный кружок */
 .select_label:hover .custom_radio {
   border-color: #3b82f6;
 }
