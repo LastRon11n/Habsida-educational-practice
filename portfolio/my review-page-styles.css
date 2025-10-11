@@ -49,14 +49,26 @@ a{
     color:gray;
 } */
 
+.picture_inst:hover{
+    transform: scale(1.3);
+
+}
+
+.picture_tlg:hover{
+    transform: scale(1.3);
+
+}
+
 .picture_inst{
     width: 50px;
     height: 30px;
+    transition: 0.3s;
 }
 
 .picture_tlg{
      width: 50px;
     height: 30px;
+    transition: 0.3s;
 }
 
 .avatar{
