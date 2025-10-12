@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Regular.woff2") format("woff2"),
+    url("../fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Bold.woff2") format("woff2"),
+    url("../fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Пример подключения курсивного, если есть */
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Italic.woff2") format("woff2"),
+    url("../fonts/TTLakes-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: "TT Lakes", sans-serif;
+}
+
+.nav-box {
+position: relative;
+max width: 320px;
+height: 88px;
+margin-bottom:24px;
+}
+
+.nav-box__nav-list{
+position: relative;
+display: flex;
+}
+
+.nav-list__menu{
+position: absolute;
+width: 40px;
+height: 40px;
+top: 24px;
+left: 16px;
+}
+
+.nav-list__group{
+position: absolute;
+width: 96.55px;
+height: 50.81px;
+top: 18.59px;
+left: 72.73px;
+border: 0.5px;
+}
+
+/* Добавляем черту с помощью псевдоэлемента */
+.nav-list__group::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 32px;
+  top: 10px;
+  left: 115px;
+  background-color: #e0e0e0;
+  border-radius: 1px;
+}
+/* .nav-list__divider {
+  position: absolute;
+  width: 2px;
+  height: 32px;
+  top: 28px;
+  left: 186px;
+  background-color: #e0e0e0;
+  border-radius: 1px;
+} */
+
+.nav-list__repair{
+position: absolute;
+width: 40px;
+height: 40px;
+top: 24px;
+left: 208px;
+}
+
+.nav-list__checkstatus{
+position: absolute;
+width: 40px;
+height: 40px;
+top: 24px;
+left: 264px;
+}
+
+.container {
+    width: 320px;
+    height: 509px;
+    padding: 0px;
+    /* padding: 16px; */
+    background-color: #F8F8F8;
+}
+
+.title-box {
+    position: relative;
+    width: 304px;
+    height: 40px;
+
+
+}
+
+.title-box::before{
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+width: 4px; /* толщина линии */
+height: 100%; /* по высоте текста */
+background-color: #41F6D7; /* зелёный цвет как в макете */
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.title-box__main-title{
+    position: relative;
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 28px;
+    padding-left: 16px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    
+}
+
