@@ -1,15 +1,23 @@
 @font-face {
   font-family: "TT Lakes";
-  src: url("../tt-lakes/TTLakes-Medium.woff2") format("woff2"),
-    url("../tt-lakes/TTLakes-Medium.woff") format("woff");
+  src: url("./TTLakes/TTLakes-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 
 @font-face {
   font-family: "TT Lakes";
-  src: url("../tt-lakes/TTLakesCompressed-Black.woff2") format("woff2"),
-    url("../tt-lakes/TTLakesCompressed-Black.woff") format("woff");
+  src: url("./TTLakes/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("./TTLakes/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -17,9 +25,9 @@
 /* Пример подключения курсивного, если есть */
 @font-face {
   font-family: "TT Lakes";
-   src: url("../tt-lakes/TTLakesCondensed-Bold.woff2") format("woff2"),
-    url("../tt-lakes/TTLakesCondensed-Bold.woff") format("woff");
-    font-style: normal;
+  src: url("./TTLakes/TTLakes-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -40,48 +48,47 @@ a {
 
 body {
   font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
 }
-
 
 .nav-box {
-
-width: 320px;
-height: 88px;
-margin-bottom:24px; 
-background-color: #fff;
+  width: 320px;
+  height: 88px;
+  margin-bottom: 24px;
+  background-color: #fff;
 }
 
-.nav-box__nav-list{ 
-display: flex;
-justify-content: space-around;
+.nav-box__nav-list {
+  display: flex;
+  justify-content: space-around;
 }
 
-.nav-list__menu{
-width: 40px;
-height: 40px;
-margin-top: 24px;
-margin-bottom: 24px;
-margin-left: 16px;
+.nav-list__menu {
+  width: 40px;
+  height: 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: 16px;
 }
 
-.nav-list__group{
-position: relative;
-width: 96.55px;
-height: 50.81px;
-border: 0.5px;
-margin-top: 19px;
-margin-bottom: 19px;
-/* margin-left: 16.73px; */
+.nav-list__group {
+  position: relative;
+  width: 96.55px;
+  height: 50.81px;
+  border: 0.5px;
+  margin-top: 19px;
+  margin-bottom: 19px;
+  /* margin-left: 16.73px; */
 }
 
 /* Добавляем черту с помощью псевдоэлемента */
 .nav-list__group::after {
-content: "";
- position: absolute;
+  content: "";
+  position: absolute;
   width: 2px;
   height: 32px;
   top: 10px;
-  left: 110px;  
+  left: 110px;
   background-color: #e0e0e0;
   border-radius: 1px;
 }
@@ -95,62 +102,56 @@ content: "";
   border-radius: 1px;
 } */
 
-.nav-list__repair{
-
-width: 40px;
-height: 40px;
-margin-top: 24px;
-margin-bottom: 24px;    
-margin-right: 16px;
-margin-left: 20px;
+.nav-list__repair {
+  width: 40px;
+  height: 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-right: 16px;
+  margin-left: 20px;
 }
 
-.nav-list__checkstatus{
-
-width: 40px;
-height: 40px;
-margin-top: 24px;
-margin-bottom: 24px;
-margin-right: 16px;
+.nav-list__checkstatus {
+  width: 40px;
+  height: 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-right: 16px;
 }
 
 .menu-container {
-    width: 320px;
-    height: 509px;
-    padding: 0px;
-    margin: 0px;
-    background-color: #F8F8F8;
+  width: 320px;
+  height: 509px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #f8f8f8;
 }
 
 .title-box {
-    position: relative;
-    width: 304px;
-    height: 40px;
-    margin-top: 24px;
-
-
+  position: relative;
+  width: 304px;
+  height: 40px;
+  margin-top: 24px;
 }
 
-.title-box::before{
-content: "";
-position: absolute;
-left: 0;
-top: 0;
-width: 4px; /* толщина линии */
-height: 100%; /* по высоте текста */
-background-color: #41F6D7; /* зелёный цвет как в макете */
-border-top-right-radius: 4px;
-border-bottom-right-radius: 4px;
+.title-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px; /* толщина линии */
+  height: 100%; /* по высоте текста */
+  background-color: #41f6d7; /* зелёный цвет как в макете */
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
-.title-box__main-title{
-    position: relative;
-    font-weight: 700;
-    line-height: 40px;
-    font-size: 28px;
-    padding-left: 16px;
-    letter-spacing: -0.6px;
-    color: #1B1C21;
-    
+.title-box__main-title {
+  position: relative;
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 28px;
+  padding-left: 16px;
+  letter-spacing: -0.6px;
+  color: #1b1c21;
 }
-
