@@ -1,17 +1,15 @@
 @font-face {
   font-family: "TT Lakes";
-  src: url("../fonts/TTLakes-Regular.woff2") format("woff2"),
-    url("../fonts/TTLakes-Regular.woff") format("woff");
-  font-weight: 400;
+  src: url("../tt-lakes/TTLakes-Medium.woff2") format("woff2"),
+    url("../tt-lakes/TTLakes-Medium.woff") format("woff");
   font-style: normal;
-  font-display: swap;
+  font-display: swap
 }
 
 @font-face {
   font-family: "TT Lakes";
-  src: url("../fonts/TTLakes-Bold.woff2") format("woff2"),
-    url("../fonts/TTLakes-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../tt-lakes/TTLakesCompressed-Black.woff2") format("woff2"),
+    url("../tt-lakes/TTLakesCompressed-Black.woff") format("woff");
   font-style: normal;
   font-display: swap;
 }
@@ -19,10 +17,9 @@
 /* Пример подключения курсивного, если есть */
 @font-face {
   font-family: "TT Lakes";
-  src: url("../fonts/TTLakes-Italic.woff2") format("woff2"),
-    url("../fonts/TTLakes-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
+   src: url("../tt-lakes/TTLakesCondensed-Bold.woff2") format("woff2"),
+    url("../tt-lakes/TTLakesCondensed-Bold.woff") format("woff");
+    font-style: normal;
   font-display: swap;
 }
 
@@ -45,43 +42,46 @@ body {
   font-family: "TT Lakes", sans-serif;
 }
 
+
 .nav-box {
-position: relative;
-max width: 320px;
+
+width: 320px;
 height: 88px;
-margin-bottom:24px;
+margin-bottom:24px; 
+background-color: #fff;
 }
 
-.nav-box__nav-list{
-position: relative;
+.nav-box__nav-list{ 
 display: flex;
+justify-content: space-around;
 }
 
 .nav-list__menu{
-position: absolute;
 width: 40px;
 height: 40px;
-top: 24px;
-left: 16px;
+margin-top: 24px;
+margin-bottom: 24px;
+margin-left: 16px;
 }
 
 .nav-list__group{
-position: absolute;
+position: relative;
 width: 96.55px;
 height: 50.81px;
-top: 18.59px;
-left: 72.73px;
 border: 0.5px;
+margin-top: 19px;
+margin-bottom: 19px;
+/* margin-left: 16.73px; */
 }
 
 /* Добавляем черту с помощью псевдоэлемента */
 .nav-list__group::after {
-  content: "";
-  position: absolute;
+content: "";
+ position: absolute;
   width: 2px;
   height: 32px;
   top: 10px;
-  left: 115px;
+  left: 110px;  
   background-color: #e0e0e0;
   border-radius: 1px;
 }
@@ -96,26 +96,29 @@ border: 0.5px;
 } */
 
 .nav-list__repair{
-position: absolute;
+
 width: 40px;
 height: 40px;
-top: 24px;
-left: 208px;
+margin-top: 24px;
+margin-bottom: 24px;    
+margin-right: 16px;
+margin-left: 20px;
 }
 
 .nav-list__checkstatus{
-position: absolute;
+
 width: 40px;
 height: 40px;
-top: 24px;
-left: 264px;
+margin-top: 24px;
+margin-bottom: 24px;
+margin-right: 16px;
 }
 
-.container {
+.menu-container {
     width: 320px;
     height: 509px;
     padding: 0px;
-    /* padding: 16px; */
+    margin: 0px;
     background-color: #F8F8F8;
 }
 
@@ -123,6 +126,7 @@ left: 264px;
     position: relative;
     width: 304px;
     height: 40px;
+    margin-top: 24px;
 
 
 }
