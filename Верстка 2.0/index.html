@@ -9,28 +9,51 @@
   </head>
 
   <body main-container>
-    <header class="nav-box">
-      <ul class="nav-box__nav-list">
-        <li class="nav-list__menu">
+    <nav class="header-box">
+      <ul class="header-box__nav-list">
+        <li class="nav-list__burger-icon">
           <img src="./ic/burger.svg" alt="menu-icon" />
         </li>
-        <li class="nav-list__group">
+        <li class="nav-list__group-icon">
           <img src="./ic/Group.svg" alt="group-icon" />
         </li>
-        <!-- <li class="nav_list__divider">
-        </li> -->
-        <li class="nav-list__repair">
+        <div class="nav-list__divider"></div>
+        <li class="nav-list__repair-icon">
           <img src="./ic/repair.svg" alt="repair-icon" />
         </li>
-        <li class="nav-list__checkstatus">
+        <li class="nav-list__checkstatus-icon">
           <img src="./ic/checkstatus.svg" alt="checkstatus-icon" />
         </li>
       </ul>
-    </header>
-    <menu class="menu-container">
+    </nav>
+    <main class="main-container">
       <div class="title-box">
-        <h1 class="title-box__main-title">Услуги и сервисы</h1>
+        <h1 class="title-box__title">Услуги и сервисы</h1>
       </div>
-    </menu>
+
+      <div class="type-box">
+        <input
+          class="type-box__text"
+          type="text"
+          placeholder="Ремонтируемые устройства"
+        />
+      </div>
+      <div class="about-us">
+        <div class="about-us__text"></div>
+        <p>
+          Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+          Только у нас вы можете отремонтировать свой ноутбук Dell с официальной
+          гарантией производителя.
+        </p>
+      </div>
+
+      <div class="expand-box">
+        <img class="expand-box__img" src="./ic/expand.svg" alt="expand-icon" />
+        <span class="expand-box__text">Читать далее</span>
+      </div>
+      <div class="img-box">
+        <img class="img-box__img" src="./ic/CPS.png" alt="cps-img" />
+      </div>
+    </main>
   </body>
 </html>

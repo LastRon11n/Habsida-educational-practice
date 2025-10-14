@@ -48,22 +48,31 @@ a {
 
 body {
   font-family: "TT Lakes", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  color: #1b1c21;
 }
 
-.nav-box {
-  width: 320px;
-  height: 88px;
+.header-box {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
   margin-bottom: 24px;
   background-color: #fff;
 }
 
-.nav-box__nav-list {
+/* .header-box__nav-list {
   display: flex;
   justify-content: space-around;
+} */
+
+.header-box__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-.nav-list__menu {
+.nav-list__burger-icon {
   width: 40px;
   height: 40px;
   margin-top: 24px;
@@ -71,47 +80,33 @@ body {
   margin-left: 16px;
 }
 
-.nav-list__group {
+.nav-list__group-icon {
   position: relative;
-  width: 96.55px;
-  height: 50.81px;
+  width: 97px;
+  height: 51px;
   border: 0.5px;
   margin-top: 19px;
   margin-bottom: 19px;
   /* margin-left: 16.73px; */
 }
 
-/* Добавляем черту с помощью псевдоэлемента */
-.nav-list__group::after {
-  content: "";
-  position: absolute;
+.nav-list__divider {
   width: 2px;
   height: 32px;
-  top: 10px;
-  left: 110px;
   background-color: #e0e0e0;
   border-radius: 1px;
 }
-/* .nav-list__divider {
-  position: absolute;
-  width: 2px;
-  height: 32px;
-  top: 28px;
-  left: 186px;
-  background-color: #e0e0e0;
-  border-radius: 1px;
-} */
 
-.nav-list__repair {
+.nav-list__repair-icon {
   width: 40px;
   height: 40px;
   margin-top: 24px;
   margin-bottom: 24px;
-  margin-right: 16px;
+  /* margin-right: 16px; */
   margin-left: 20px;
 }
 
-.nav-list__checkstatus {
+.nav-list__checkstatus-icon {
   width: 40px;
   height: 40px;
   margin-top: 24px;
@@ -119,11 +114,13 @@ body {
   margin-right: 16px;
 }
 
-.menu-container {
-  width: 320px;
-  height: 509px;
-  padding: 0px;
+.main-container {
+  width: 100%;
+  max-width: 320px;
+  max-height: 509px;
   margin: 0px;
+  padding-top: 24px;
+  /* padding-right: 16px; */
   background-color: #f8f8f8;
 }
 
@@ -131,7 +128,7 @@ body {
   position: relative;
   width: 304px;
   height: 40px;
-  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .title-box::before {
@@ -146,12 +143,70 @@ body {
   border-bottom-right-radius: 4px;
 }
 
-.title-box__main-title {
+.title-box__title {
   position: relative;
   font-weight: 700;
   line-height: 40px;
   font-size: 28px;
   padding-left: 16px;
   letter-spacing: -0.6px;
-  color: #1b1c21;
+}
+
+.type-box {
+  padding-left: 16px;
+  margin-bottom: 24px;
+}
+
+.type-box__text {
+  display: block;
+  width: 90%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  border: 2px solid #b8ffec;
+  color: #7e7e82;
+  border-radius: 6px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding: 8px 10px 8px 16px;
+  outline: none;
+  background-color: #fff;
+}
+
+.about-us {
+  max-width: 300px;
+  height: auto;
+  padding: 0px 16px 16px 16px;
+}
+
+.about-us-box__text {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 8px;
+}
+
+.expand-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 16px 16px;
+}
+
+.expand-box__text {
+  padding-left: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.img-box {
+  width: 100%;
+}
+.img-box__img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
