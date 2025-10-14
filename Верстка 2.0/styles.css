@@ -51,6 +51,10 @@ body {
   font-size: 14px;
   color: #1b1c21;
 }
+.main-container {
+  max-width: 320px;
+  max-height: 597px;
+}
 
 .header-box {
   width: 100%;
