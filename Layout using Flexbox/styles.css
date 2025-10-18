@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
 }
-
 *,
 *::before,
 *::after {
@@ -15,7 +14,7 @@ a {
 
 body {
   font-family: "TT Lakes", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #1b1c21;
   background-color: #ffffff;
 }
@@ -40,7 +39,7 @@ body {
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 16px;
+  margin: 0;
 }
 .devider::after {
   display: inline-flex;
@@ -49,6 +48,7 @@ body {
   height: 32px;
   border: 1px solid #eaeaea;
   border-radius: 1px;
+  margin: 0 16px;
 }
 
 .main {
@@ -69,7 +69,7 @@ body {
   border-bottom-right-radius: 6px;
 }
 
-.title__text h1{
+.title__text h1 {
   font-size: 28px;
   font-weight: bold;
   padding-left: 16px;
@@ -79,7 +79,7 @@ body {
 .services__menu {
   overflow-x: auto;
   white-space: nowrap;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .services__list {
@@ -87,6 +87,7 @@ body {
   gap: 12px;
   list-style: none;
   margin-left: 16px;
+  padding-right: 16px;
 }
 
 .services__item {
@@ -94,18 +95,13 @@ body {
   padding: 8px 16px;
   font-family: "TT Lakes", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   color: #7e7e82;
   border: 2px solid transparent;
   border-radius: 6px;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.2s ease;
-}
-.services__item--active:active {
-  color: #7e7e82;
-  border-color: #b8ffec;
-  background-color: #ffffff;
 }
 
 .services__item--active {
@@ -114,4 +110,23 @@ body {
   background-color: #ffffff;
 }
 
-@media;
+.about-us {
+}
+
+.about-us__text {
+  padding: 0 11px 0 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.about-us__btn-link {
+  display: flex;
+  align-items: center;
+  margin: 22px 0 16px 16px;
+}
+
+.cps-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
