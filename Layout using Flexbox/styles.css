@@ -32,23 +32,33 @@ ul {
   box-shadow: 0 2px 3px 0 #d9fff5;
 }
 
+.header__menu {
+  max-width: 100%;
+}
+
 .header__list {
+  width: 100%;
+  max-width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   column-gap: 16px;
 }
 
 .list__item-logo {
-  display: inline-flex;
-  flex-shrink: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.devider-logo-icon {
-  display: inline-flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0;
+.list__item-logo::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  border-radius: 1px;
+  margin-left: 16px;
 }
 
 .header__right-icon {
@@ -60,14 +70,16 @@ ul {
   content: "";
 }
 
-.devider-logo-icon::after {
-  display: inline-flex;
-  content: "";
-  width: 2px;
-  height: 32px;
-  border: 1px solid #eaeaea;
-  border-radius: 1px;
-  margin: 0 16px;
+.header__list img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  object-fit: contain;
+}
+
+.list__item-logo img {
+  width: 96px;
+  height: 50px;
 }
 
 .main {
@@ -103,7 +115,7 @@ ul {
 
 .services__list {
   display: inline-flex;
-  gap: 12px;
+  gap: 10px;
   list-style: none;
   margin-left: 16px;
   padding-right: 16px;
@@ -129,9 +141,6 @@ ul {
   background-color: #ffffff;
 }
 
-.about-us {
-}
-
 .about-us__text {
   padding: 0 11px 0 16px;
   font-size: 14px;
@@ -149,26 +158,37 @@ ul {
   height: auto;
   display: block;
 }
+
+/* Адаптив планшет на 768px */
+
 @media (min-width: 768px) {
+  body {
+    box-sizing: border-box;
+  }
+/* Скрываем разделитель у логотипа CPS */
+.list__item-logo::after{
+display: none;
+}
+
   .header {
-    padding: 24px;
+    padding: 0px;
   }
 
   .header__list {
-    display: flex;
-    justify-content: space-around;
+    display: inline-flex;
+    justify-content: space-between;
     align-items: center;
     column-gap: 16px;
+    padding: 24px;
   }
 
   .list__item-menu {
-    display: flex;
+    display: inline-flex;
   }
 
   .devider-menu-icon::before {
     content: "";
     display: inline-flex;
-    content: "";
     width: 2px;
     height: 32px;
     border: 1px solid #eaeaea;
@@ -176,38 +196,43 @@ ul {
     margin: 0 20px;
   }
 
-.devider-logo-icon{
-  display: none;
-}
-
-
-
-
-
-
-
-}
-
-@media (min-width: 1120px) {
-  .list__item-repair--text::before {
-    content: "Оставить заявку";
-    margin-right: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #1b1c21;
+  .header__right-icon {
+    display: inline-block;
   }
-
-  .list__item-checkstatus--text::before {
-    content: "Статус ремонта";
-    margin-right: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #1b1c21;
-  }
-
-  .header__list li {
+  .right-icon__list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-left: 250px;
+  }
+  .right-icon__list li {
+    margin-right: 16px;
+  }
+
+  .list__item-profile::after {
+    content: "";
+  }
+  /* Адаптив Desktop на 1120px  */
+
+  @media (min-width: 1120px) {
+    .list__item-repair--text::before {
+      content: "Оставить заявку";
+      margin-right: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #1b1c21;
+    }
+
+    .list__item-checkstatus--text::before {
+      content: "Статус ремонта";
+      margin-right: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #1b1c21;
+    }
+
+    .header__list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }
