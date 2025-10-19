@@ -1,6 +1,14 @@
 html {
   box-sizing: border-box;
 }
+
+body {
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  color: #1b1c21;
+  background-color: #ffffff;
+}
+
 *,
 *::before,
 *::after {
@@ -12,11 +20,11 @@ a {
   text-decoration: none;
 }
 
-body {
-  font-family: "TT Lakes", sans-serif;
-  font-size: 14px;
-  color: #1b1c21;
-  background-color: #ffffff;
+li,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .header {
@@ -41,6 +49,16 @@ body {
   align-items: center;
   margin: 0;
 }
+
+.header__right-icon {
+  display: none;
+}
+
+.list__item-repair--text,
+.list__item-checkstatus--text::before {
+  content: "";
+}
+
 .devider::after {
   display: inline-flex;
   content: "";
@@ -129,4 +147,30 @@ body {
   max-width: 100%;
   height: auto;
   display: block;
+}
+@media (min-widht: 768px) {
+}
+
+@media (min-width: 1120px) {
+  .list__item-repair--text::before {
+    content: "Оставить заявку";
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1b1c21;
+  }
+
+  .list__item-checkstatus--text::before {
+    content: "Статус ремонта";
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1b1c21;
+  }
+
+  .header__list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
