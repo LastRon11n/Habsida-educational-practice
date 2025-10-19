@@ -20,8 +20,8 @@ a {
   text-decoration: none;
 }
 
-li,
-ul {
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -33,16 +33,15 @@ ul {
 }
 
 .header__menu {
-  max-width: 100%;
+  width: 100%;
 }
 
 .header__list {
-  width: 100%;
-  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 16px;
+  width: 100%;
 }
 
 .list__item-logo {
@@ -53,7 +52,6 @@ ul {
 
 .list__item-logo::after {
   content: "";
-  display: block;
   width: 2px;
   height: 32px;
   background-color: #eaeaea;
@@ -146,6 +144,10 @@ ul {
   font-size: 14px;
   font-weight: 400;
 }
+/* Дополнительный параграф в разрешении от 768px */
+.about-us-text__p {
+  display: none;
+}
 
 .about-us__btn-link {
   display: flex;
@@ -165,30 +167,35 @@ ul {
   body {
     box-sizing: border-box;
   }
-/* Скрываем разделитель у логотипа CPS */
-.list__item-logo::after{
-display: none;
-}
+  /* Скрываем разделитель у логотипа CPS */
+  .list__item-logo::after {
+    display: none;
+  }
 
   .header {
-    padding: 0px;
+    padding: 0;
+    margin: 0;
   }
 
   .header__list {
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     column-gap: 16px;
     padding: 24px;
   }
 
   .list__item-menu {
-    display: inline-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .devider-menu-icon::before {
+  .list__item-menu::after {
     content: "";
     display: inline-flex;
+    /* justify-content: space-between; */
+    align-items: center;
     width: 2px;
     height: 32px;
     border: 1px solid #eaeaea;
@@ -197,18 +204,58 @@ display: none;
   }
 
   .header__right-icon {
-    display: inline-block;
+    display: inline-flex;
   }
   .right-icon__list {
     display: flex;
-    margin-left: 250px;
+    align-items: center;
+    padding-left: 200px;
   }
   .right-icon__list li {
     margin-right: 16px;
   }
-
+  .list__item-profile {
+    position: relative;
+    padding-right: 20px;
+  }
+  /* Добовляем разделитель к иконке profile */
   .list__item-profile::after {
     content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    border-radius: 1px;
+  }
+
+  .about-us-text__p {
+    display: inline-flex;
+  }
+
+  .about-us {
+    display: flex;
+  }
+  .about-us__text {
+    display:block;
+    width: 50%;
+  }
+
+  .cps-img {
+    display: block;
+    border-radius: 2px;
+    object-fit: cover;
+    /* width: 360px;
+    height: 208px; */
+  }
+
+  .about-us__btn-link{
+    padding: 0;
+    margin: 14px;
+    font-size: 16px;
+    font-weight: 500;
   }
   /* Адаптив Desktop на 1120px  */
 
