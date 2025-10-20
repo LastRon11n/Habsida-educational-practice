@@ -32,16 +32,11 @@ li {
   box-shadow: 0 2px 3px 0 #d9fff5;
 }
 
-.header__menu {
-  width: 100%;
-}
-
 .header__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 16px;
-  width: 100%;
 }
 
 .list__item-logo {
@@ -49,7 +44,7 @@ li {
   align-items: center;
   position: relative;
 }
-
+/* devider для эконки logo */
 .list__item-logo::after {
   content: "";
   width: 2px;
@@ -58,33 +53,37 @@ li {
   border-radius: 1px;
   margin-left: 16px;
 }
-
+/* отключаем правые иконки в мобильной версии */
 .header__right-icon {
   display: none;
 }
 
-.list__item-repair--text,
+/* .list__item-repair--text,
 .list__item-checkstatus--text::before {
   content: "";
-}
+} */
 
+/* размер иконок */
 .header__list img {
   width: 40px;
   height: 40px;
   display: block;
   object-fit: contain;
 }
-
+/* размер иконок */
 .list__item-logo img {
   width: 96px;
   height: 50px;
 }
 
 .main {
+  display: block;
   background-color: #f8f8f8;
+  /* min-height: 509px; */
 }
 .title {
   position: relative;
+  margin: 24px 16px 24px 0;
 }
 .title::before {
   content: "";
@@ -101,14 +100,15 @@ li {
 .title__text h1 {
   font-size: 28px;
   font-weight: bold;
-  padding-left: 16px;
-  margin-bottom: 24px;
+  padding: 0 16px;
+  margin: 0;
+  /* margin-bottom: 24px; */
 }
 
 .services__menu {
   overflow-x: auto;
   white-space: nowrap;
-  margin-bottom: 24px;
+  margin: 0 16px 24px 16px;
 }
 
 .services__list {
@@ -122,7 +122,6 @@ li {
 .services__item {
   display: inline-block;
   padding: 8px 16px;
-  font-family: "TT Lakes", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #7e7e82;
@@ -139,26 +138,32 @@ li {
   background-color: #ffffff;
 }
 
+.about-us {
+}
+
 .about-us__text {
-  padding: 0 11px 0 16px;
+  padding: 0 16px 16px 16px;
   font-size: 14px;
   font-weight: 400;
 }
-/* Дополнительный параграф в разрешении от 768px */
-.about-us-text__p {
+/* Второй параграф в разрешении от 768px */
+.about-us-text__second-p {
   display: none;
 }
 
 .about-us__btn-link {
+  font-size: 16px;
+  font-weight: 500;
   display: flex;
-  align-items: center;
-  margin: 22px 0 16px 16px;
+  margin-top: 16px;
 }
 
-.cps-img img {
-  max-width: 100%;
-  height: auto;
+.cps-img {
+  width: 100%;
   display: block;
+  /* margin-top: 16px; */
+  border-radius: 6px;
+  object-fit: cover; 
 }
 
 /* Адаптив планшет на 768px */
@@ -172,6 +177,10 @@ li {
     display: none;
   }
 
+  .title__text h1 {
+    margin: 0;
+  }
+
   .header {
     padding: 0;
     margin: 0;
@@ -179,7 +188,7 @@ li {
 
   .header__list {
     display: inline-flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     column-gap: 16px;
     padding: 24px;
@@ -187,7 +196,6 @@ li {
 
   .list__item-menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
 
@@ -237,26 +245,43 @@ li {
 
   .about-us {
     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0 24px;
   }
   .about-us__text {
-    display:block;
-    width: 50%;
+    flex: 1 1 45%;
+    padding-right: 16px;
   }
 
   .cps-img {
-    display: block;
-    border-radius: 2px;
-    object-fit: cover;
-    /* width: 360px;
-    height: 208px; */
+    flex: 1 1 45%;
+    margin-top: 0;
+    width: auto;
+    height: auto;
+    border-radius: 6px;
   }
 
-  .about-us__btn-link{
+  .cps-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+
+  .about-us__btn-link {
     padding: 0;
-    margin: 14px;
+    margin-top: 14px;
     font-size: 16px;
     font-weight: 500;
   }
+  .about-us-text__second-p {
+    display: block;
+    margin-top: 24px;
+  }
+
   /* Адаптив Desktop на 1120px  */
 
   @media (min-width: 1120px) {
