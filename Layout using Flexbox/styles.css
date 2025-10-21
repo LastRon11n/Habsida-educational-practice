@@ -29,6 +29,7 @@ li {
 
 .header {
   padding: 24px 16px;
+  margin-bottom:2px ;
   box-shadow: 0 2px 3px 0 #d9fff5;
 }
 
@@ -58,11 +59,6 @@ li {
   display: none;
 }
 
-/* .list__item-repair--text,
-.list__item-checkstatus--text::before {
-  content: "";
-} */
-
 /* размер иконок */
 .header__list img {
   width: 40px;
@@ -83,13 +79,13 @@ li {
 }
 .title {
   position: relative;
-padding: 24px 0 24px 0;
-  /* padding-top: 24px; */
+  padding: 24px 0 24px 0;
+
 }
 
-.title__text{
+.title__text {
   position: relative;
-  padding-left:16px ;
+  padding-left: 16px;
 }
 .title__text::before {
   content: "";
@@ -109,6 +105,10 @@ padding: 24px 0 24px 0;
   padding: 0 16px;
   margin: 0;
   /* margin-bottom: 24px; */
+}
+
+.title-group-button {
+  display: none;
 }
 
 .services__menu {
@@ -144,9 +144,6 @@ padding: 24px 0 24px 0;
   background-color: #ffffff;
 }
 
-.about-us {
-}
-
 .about-us__text {
   padding: 0 16px 16px 16px;
   font-size: 14px;
@@ -154,6 +151,10 @@ padding: 24px 0 24px 0;
 }
 /* Второй параграф в разрешении от 768px */
 .about-us-text__second-p {
+  display: none;
+}
+
+.about-us-text__all-text {
   display: none;
 }
 
@@ -169,7 +170,7 @@ padding: 24px 0 24px 0;
   display: block;
   /* margin-top: 16px; */
   border-radius: 6px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 /* Адаптив планшет на 768px */
@@ -178,6 +179,15 @@ padding: 24px 0 24px 0;
   body {
     box-sizing: border-box;
   }
+
+  .title .title-group-button {
+    display: none;
+  }
+
+  .about-us .about-us-text__all-text {
+    display: none;
+  }
+
   /* Скрываем разделитель у логотипа CPS */
   .list__item-logo::after {
     display: none;
@@ -189,7 +199,7 @@ padding: 24px 0 24px 0;
 
   .header {
     padding: 0;
-    margin: 0;
+    margin-bottom:2px;
   }
 
   .header__list {
@@ -287,30 +297,63 @@ padding: 24px 0 24px 0;
     display: block;
     margin-top: 24px;
   }
+}
 
-  /* Адаптив Desktop на 1120px  */
+/* Адаптив Desktop на 1120px  */
 
-  @media (min-width: 1120px) {
-    .list__item-repair--text::before {
-      content: "Оставить заявку";
-      margin-right: 8px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #1b1c21;
-    }
+@media (min-width: 1120px) {
+  .list__item-repair--text::before {
+    content: "Оставить заявку";
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1b1c21;
+  }
 
-    .list__item-checkstatus--text::before {
-      content: "Статус ремонта";
-      margin-right: 8px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #1b1c21;
-    }
+  .list__item-checkstatus--text::before {
+    content: "Статус ремонта";
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1b1c21;
+  }
+  .header {
+    display: none;
+  }
 
-    .header__list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .title {
+    padding: 42px 0 8px 0;
+    margin: 0;
+  }
+
+  .title__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title .title-group-button {
+    display: inline-flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .title-group-button li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .title-group-button li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .about-us__text:first-child p {
+    display: none;
+  }
+  .about-us .about-us-text__all-text {
+    display: block;
   }
 }
