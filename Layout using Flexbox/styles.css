@@ -27,9 +27,15 @@ li {
   margin: 0;
 }
 
+button {
+  border: none;
+  background-color: #f8f8f8;
+}
 .header {
+  position: relative;
+  z-index: 100;
   padding: 24px 16px;
-  margin-bottom:2px ;
+  /* margin-bottom: 2px; */
   box-shadow: 0 2px 3px 0 #d9fff5;
 }
 
@@ -75,12 +81,11 @@ li {
 .main {
   display: block;
   background-color: #f8f8f8;
-  /* min-height: 509px; */
 }
+
 .title {
   position: relative;
   padding: 24px 0 24px 0;
-
 }
 
 .title__text {
@@ -120,9 +125,9 @@ li {
 .services__list {
   display: inline-flex;
   gap: 10px;
-  list-style: none;
+  /* list-style: none;
   margin-left: 16px;
-  padding-right: 16px;
+  padding-right: 16px; */
 }
 
 .services__item {
@@ -142,6 +147,10 @@ li {
   color: #7e7e82;
   border-color: #b8ffec;
   background-color: #ffffff;
+}
+
+.services__list-alt {
+  display: none;
 }
 
 .about-us__text {
@@ -180,6 +189,10 @@ li {
     box-sizing: border-box;
   }
 
+  .header {
+    padding: 0;
+  }
+
   .title .title-group-button {
     display: none;
   }
@@ -197,17 +210,13 @@ li {
     margin: 0;
   }
 
-  .header {
-    padding: 0;
-    margin-bottom:2px;
-  }
-
   .header__list {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 16px;
     padding: 24px;
+    flex-wrap: nowrap;
+    width: 100%;
   }
 
   .list__item-menu {
@@ -232,7 +241,7 @@ li {
   }
   .right-icon__list {
     display: flex;
-    align-items: center;
+    align-items: center;;
     padding-left: 200px;
   }
   .right-icon__list li {
@@ -253,6 +262,10 @@ li {
     height: 32px;
     background-color: #eaeaea;
     border-radius: 1px;
+  }
+
+  .main{
+    min-height: 416px;
   }
 
   .about-us-text__p {
@@ -348,6 +361,19 @@ li {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+  }
+
+  .services__menu .services__list {
+    display: none;
+  }
+
+  .services__menu .services__list-alt {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  .main{
+    min-height: 535px;
   }
 
   .about-us__text:first-child p {

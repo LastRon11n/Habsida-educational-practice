@@ -60,7 +60,7 @@
     <!-- MAIN -->
     <main class="main">
       <div class="title">
-        <div class="title__text">
+        <section class="title__text">
           <h1>Услуги и сервисы</h1>
           <ul class="title-group-button">
             <li class="list__item-repair list__item-repair--text">
@@ -74,23 +74,66 @@
               </a>
             </li>
           </ul>
-        </div>
+        </section>
       </div>
-      <div class="services">
+      <!-- SCROLL MENU -->
+      <section class="services">
         <nav class="services__menu">
           <ul class="services__list">
             <li class="services__item services__item--active">
               Ремонтируемые устройства
             </li>
-            <li class="services__item">Дополнительные услуги</li>
-            <li class="services__item">Цены на услуги</li>
-            <li class="services__item">Специальные предложения</li>
-            <li class="services__item">Ремонтируемые бренды</li>
-            <li class="services__item">Отзывы клиентов</li>
+            <li class="services__item">
+              Дополнительные услуги
+              <a href="#"></a>
+            </li>
+            <li class="services__item">
+              Цены на услуги
+              <a href="#"></a>
+            </li>
+            <li class="services__item">
+              Специальные предложения
+              <a href="#"></a>
+            </li>
+            <li class="services__item">
+              Ремонтируемые бренды
+              <a href="#"></a>
+            </li>
+            <li class="services__item">
+              Отзывы клиентов
+              <a href="#"></a>
+            </li>
+          </ul>
+          <!-- Альтернативная скролл секция с другими названиями при разрешении 1120px -->
+          <ul class="services__list-alt">
+            <li class="services__item services__item--active">
+              Ремонтируемые бренды
+            </li>
+            <li class="services__item">
+              Ремонтируемые устройства
+              <a href="#"></a>
+            </li>
+            <li class="services__item">
+              Цены на услуги
+              <a href="#"></a>
+            </li>
+            <li class="services__item">
+              Адреса сервисных центров
+              <a href="#"></a>
+            </li>
+            <li class="services__item">
+              Специальные цены
+              <a href="#"></a>
+            </li>
+            <li class="services__item">
+              Отзывы
+              <a href="#"></a>
+            </li>
           </ul>
         </nav>
-      </div>
-      <div class="about-us">
+      </section>
+      <!-- ABOUT-US -->
+      <section class="about-us">
         <div class="about-us__text">
           <p class="about-us-text__first-p">
             Мы являемся авторизованным сервисным центром по ремонту техники
@@ -111,17 +154,17 @@
             Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
             очередь, советуют нас родным и близким.
           </div>
-          <!-- <br /> -->
-          <div class="about-us__btn-link">
+          <!-- BUTTON/EXPAND -->
+          <button class="about-us__btn-link" type="button" aria-hidden="true">
             <img src="./ic/expand.svg" alt="expand-icon" />
             <span> Читать далее </span>
-          </div>
+          </button>
         </div>
 
         <div class="cps-img">
           <img src="./ic/CPS.png" alt="CPS-icon" />
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>
