@@ -1,0 +1,309 @@
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: #eff6ff;
+  color: #2a4a5c;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  color: #96a5b1;
+}
+
+.container {
+  display: flex;
+  margin: 70px 70px;
+  background-color: #fff;
+}
+
+.left_side {
+  width: auto;
+  position: relative;
+}
+
+.banner {
+}
+
+.banner_img {
+  width: auto;
+}
+
+.logo {
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  left: 50px;
+}
+
+.in-logo_img {
+  width: 150px;
+  height: 100px;
+}
+
+.right_side {
+  width: 50%;
+  padding-left: 60px;
+  padding-top: 100px;
+}
+
+.title {
+  line-height: 1;
+  color: #7b8a92;
+}
+
+.title_mane {
+  color: #2a4a5c;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.social_btn {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+  margin-bottom: 60px;
+}
+
+.social_btn button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  gap: 15px;
+  width: 250px;
+  height: 45px;
+  margin-top: 50px;
+  margin-right: 30px;
+  border: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fb_btn {
+  background-color: #255a9b;
+}
+.fb_btn:hover {
+  transform: scale(1.02);
+}
+
+.fb_img {
+  background-color: #255a9b;
+  width: 30px;
+  height: 20px;
+}
+
+.in_btn {
+  background-color: #0076b6;
+}
+
+.in_btn:hover {
+  transform: scale(1.02);
+}
+
+.in_img {
+  width: 30px;
+  height: 20px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  color: #9aa8b6;
+  font-size: 14px;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 50px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #e1e8ee;
+  max-width: 100px;
+}
+
+.divider span {
+  margin: 0 15px;
+  color: #9aa8b6;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.form_group {
+  display: flex;
+  gap: 40px;
+  margin-left: 10px;
+}
+
+input {
+  color: #afafaf;
+}
+
+.input_box {
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  color: #2a4a5c;
+  border: 2px solid #eeeeee;
+  /* border-left: 4px solid transparent; место под будущую полоску */
+  border-radius: 2px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input_box:focus {
+  /* border-color: #007bff; */
+  border-left: 4px solid #007bff;
+}
+
+.type_text h2 {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.type_text {
+  margin: 50px 0 0 0;
+  line-height: 1;
+}
+
+/* Радиокнопки */
+.radio_group {
+  display: flex;
+}
+
+.label_group {
+  position: relative;
+  margin-bottom: 25px;
+  padding-top: 30px;
+  padding-right: 50px;
+  overflow: visible;
+}
+
+/* делаем нативную радиокнопку невидимой */
+.real_radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* создаем кастомный radio */
+.custom_radio {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #b0bec5;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+/* подсечиваем рамку при наведении на кастомный кружок */
+.select_label:hover .custom_radio {
+  border-color: #3b82f6;
+}
+
+.real_radio:checked + .custom_radio {
+  border-color: #3b82f6;
+  background-color: #3b82f6;
+}
+
+.real_radio:checked + .custom_radio::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* делаем кликабельным весь input */
+.select_label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #2a4a5c;
+  font-weight: 500;
+}
+
+.tooltip_text {
+  position: absolute;
+  top: 80px;
+  width: 240px;
+  background-color: #ffffff;
+  color: #afafaf;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.real_radio:checked ~ .tooltip_text {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.checkbox-group {
+  display: inline-block;
+  margin-top: 120px;
+  font-size: 16px;
+  color: #afafaf;
+}
+
+.checkbox-group input {
+  cursor: pointer;
+}
+.checkbox-group span {
+  padding-left: 5px;
+  pointer-events: none;
+}
+
+.checkbox-group a {
+  color: skyblue;
+}
+
+.create_account_group {
+}
+
+.create_account_btn {
+  width: 300px;
+  height: 50px;
+  padding: 15px 0;
+  background-color: #3698fb; /* насыщенный синий, как на макете */
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.create_account_btn:hover {
+  transform: scale(1.02);
+}
