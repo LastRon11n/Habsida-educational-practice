@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section>
+      <h1>CSS Positioning</h1>
+      <p>This page demonstrates different CSS positioning techniques</p>
+
+      <div class="container">
+        <div class="static-positioning">
+          <strong
+            >Static - не работают стили top, right, bottom, left и
+            z-index</strong
+          >
+        </div>
+        <div class="relative-positioning">
+          <strong
+            >Relative - работают стили top, right, bottom, left и z-index, у
+            данного блока left: 20%; top: 20px;</strong
+          >
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="relative-positioning2">
+          <strong
+            >Position с (z-index) - чем ниже правило и чем больше z-index у
+            селектора (CSS правила) тем выше (ближе) к пользователю данный
+            обьект, действует на перекрытие других обьектов
+          </strong>
+        </div>
+      </div>
+
+      <div class="container2">
+        This is a container with a relative position.
+        <div class="absolute-positioning">
+          <strong
+            >Absolute - работают стили top, right, bottom, left и z-index
+          </strong>
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="fixed-positioning">
+          <strong
+            >Fixed - Фиксированное позиционирование относительно своего
+            родительского блока</strong
+          >
+        </div>
+      </div>
+
+      <div class="container3">
+        <div class="sticky-positioning">
+          <strong
+            >Sticky - работают стили top, right, bottom, left и z-index, у
+            данного блока left: 20%; top: 20px;</strong
+          >
+          >
+        </div>  
+      </div>
+    </section>
+  </body>
+</html>
