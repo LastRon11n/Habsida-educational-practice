@@ -39,27 +39,53 @@ body {
   font-size: 20px;
   padding: 40px 60px;
   border-radius: 10px;
-  color: #000;
-  background-color: rgb(245, 246, 247);
+  color: #fff;
+  background-color: lightseagreen;
 }
 
 .shadow-basic {
-  box-shadow: 0px 8px 16px rgb(0, 0, 0);
+  box-shadow: 0px 8px 16px rgb(136 125 125);
 }
 
 .shadow-blur {
-  box-shadow: 15px 15px 20px rgb(0, 0, 0);
+  box-shadow: 15px 15px 20px rgb(108 95 95);
 }
 
 .shadow-multiple {
-  box-shadow: 
-  0px 4px 8px rgba(12, 239, 42, 0.406), 
-  0px 8px 16px rgba(49, 9, 209, 0.536), 
-  0px 16px 32px rgba(222, 215, 8, 0.612), 
-  0px 32px 64px rgba(217, 12, 12, 0.632);
+  box-shadow: 0px 4px 8px rgba(12, 239, 42, 0.406),
+    0px 8px 16px rgba(49, 9, 209, 0.536), 0px 16px 32px rgba(222, 215, 8, 0.612),
+    0px 32px 64px rgba(217, 12, 12, 0.632);
 }
 
+.shadow-basic-text {
+  text-shadow: 10px 10px 5px rgb(0, 0, 0, 0.3);
+}
 
-.shadow-basic-text{
-text-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+.shadow-glow {
+  text-shadow: 0px 4px 8px rgba(239, 88, 12, 0.406),
+    0px 8px 16px rgba(186, 9, 209, 0.536),
+    0px 16px 32px rgba(222, 215, 8, 0.612),
+    0px 32px 64px rgba(217, 210, 12, 0.632),
+    0px 4px 8px rgba(49, 112, 57, 0.406), 0px 8px 16px rgba(7, 140, 235, 0.536),
+    0px 16px 32px rgba(222, 215, 8, 0.612),
+    0px 32px 64px rgba(217, 12, 12, 0.632);
+}
+
+.border-radius {
+  border-radius: 25px 60px 25px 60px;
+}
+
+.border-image {
+  border: 10px solid;
+  border-image: linear-gradient(45deg, #ff6ec4, #7873f5) 1;
+}
+
+.outline-effect {
+outline: 10px solid #ff6ec4;
+outline-offset: 5px;
+}
+
+.blur-filter{
+    filter: blur(1px);
+
 }
