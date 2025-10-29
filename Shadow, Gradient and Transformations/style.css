@@ -140,3 +140,18 @@ body {
     transform-origin: right;
     transform: rotate(45deg);
 }
+
+.hover-scale:hover{
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.2);
+}
+
+.hover-rotate:hover{
+  transition: 1s ease-in;
+  transform: rotate(180deg);
+}
+
+.hover-3D:hover{
+  transition: transform 1s ease-in;
+  transform: perspective(100px) rotateX(50deg);
+}
