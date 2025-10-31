@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: "TT Lakes", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+button {
+  border-style: none;
+  background-color: inherit;
+}
+.container {
+  max-width: 320px;
+  max-height: 1024px;
+  box-shadow: 16px 0 52px 0 #0e185034;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.header__icon-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-list__list {
+  display: flex;
+  flex-direction: column;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  gap: 32px;
+  padding-top: 45px;
+}
+
+.nav-list__item {
+  list-style: none;
+}
+
+.nav-list__link {
+  color: #1b1c21;
+  text-decoration: none;
+}
+
+.nav-list__link--active {
+  color: #7e7e82;
+}
+.nav-list__list::before {
+  content: "";
+  display: block;
+  top: 120px;
+  left: 0;
+  width: 4px;
+  height: 32px;
+  background-color: #41f6d7;
+  position: absolute;
+  border-radius: 0 4px 4px 0;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 260px;
+}
+.footer__button-group {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__mail-address {
+  margin-top: 16px;
+}
+
+.footer__phone-number {
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer__language-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.footer__language {
+  cursor: pointer;
+}
