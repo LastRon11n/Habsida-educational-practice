@@ -190,6 +190,10 @@ body {
   animation: pulse 1s infinite;
 }
 
+.animation-spin {
+  animation: spin 2s linear infinite;
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -209,5 +213,14 @@ body {
   }
   50% {
     transform: scale(1.2);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
