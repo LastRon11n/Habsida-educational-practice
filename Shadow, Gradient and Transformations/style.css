@@ -224,3 +224,28 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.opacity-transition {
+  transition: opacity 1s transform ease-in-out;
+}
+
+.opacity-transition:hover {
+  opacity: 0.5;
+  transform: translateY(-10px);
+}
+
+.color-transition {
+  transition: color 1s ease;
+}
+
+.color-transition:hover {
+  color: #e60f90;
+}
+
+.size-transition {
+  transition: font-size 1s ease;
+}
+
+.size-transition:hover {
+  font-size: 30px;
+}
